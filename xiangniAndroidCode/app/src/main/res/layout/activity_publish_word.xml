@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="发布文字"
+        app:rightText="发布"
+        style="@style/topBarStyle"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_word"
+            android:gravity="left"
+            android:textColor="@color/textColor"
+            android:hint="说点什么..."
+            android:textSize="14sp"
+            android:padding="@dimen/dp10"
+            android:background="@drawable/rect_round_white"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <RadioGroup
+
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/ll_voice"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:checked="true"
+                style="@style/rbStyle"
+                android:text="全部可看"
+                android:layout_marginRight="15dp"
+                android:id="@+id/rb_all_can_see"
+                />
+            <RadioButton
+                android:text="好友可看"
+                android:textColor="@color/colorGray"
+                android:id="@+id/rb_friend_can_see"
+                style="@style/rbStyle" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_select_position"
+        android:layout_marginTop="5dp"
+        style="@style/selPoiStyle" />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixiangni.app.chat.GroupNameActivity">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/topbar"
+        style="@style/topBarStyle"
+        app:centerText="群名称">
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/submitBtnStyle" />
+    </com.ixiangni.ui.TopBar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/page_padding"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="群名称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:maxLength="10"
+            android:singleLine="true"
+            android:id="@+id/edt_group_name"
+            android:textSize="18sp"
+            android:textColor="@color/textColor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

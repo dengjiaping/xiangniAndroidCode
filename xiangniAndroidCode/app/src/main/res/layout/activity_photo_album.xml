@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="个人相册"
+        style="@style/topBarStyle"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/page_padding"
+        android:layout_marginBottom="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            tools:src="@mipmap/touxaing" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp10">
+
+            <include layout="@layout/layout_name_and_gender" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="20人关注"
+                android:textColor="@color/colorGray"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <com.ixiangni.util.SmartPullableLayout
+            android:id="@+id/smart_pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:dividerHeight="3dp"
+                android:divider="#eeeeee"
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </com.ixiangni.util.SmartPullableLayout>
+
+    </com.ixiangni.util.StateLayout>
+
+
+    <com.clcus.EmojiInpuLayout
+        android:visibility="gone"
+        android:id="@+id/emoji_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

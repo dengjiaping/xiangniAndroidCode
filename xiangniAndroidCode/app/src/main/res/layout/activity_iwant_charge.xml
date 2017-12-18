@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle"
+        app:centerText="我要充值" />
+
+    <android.support.v4.widget.Space
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+
+    <FrameLayout
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="180dp"
+        android:layout_height="180dp">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:background="@drawable/rect_round_white" />
+        <TextView
+            android:text="请上传转账凭证"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edt_money"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/page_padding"
+        android:background="@drawable/rect_round_white"
+        android:hint="请输入充值金额"
+        android:padding="@dimen/page_padding"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_charge"
+        style="@style/btnStyle.margin"
+        android:text="马上充值" />
+
+</LinearLayout>

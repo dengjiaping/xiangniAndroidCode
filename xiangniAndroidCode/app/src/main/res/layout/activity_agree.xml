@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="添加"
+        app:rightText="创建群"
+        style="@style/topBarStyle"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_search_user"
+        android:layout_margin="@dimen/page_padding"
+        android:background="@drawable/rect_round_white"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight">
+
+        <TextView
+            android:hint="搜索用户"
+            android:drawablePadding="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/searchsmall"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <com.ixiangni.util.SmartPullableLayout
+        android:id="@+id/smart_pull_layout"
+        app:smart_ui_enable_pull_up="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </com.ixiangni.util.SmartPullableLayout>
+
+</LinearLayout>

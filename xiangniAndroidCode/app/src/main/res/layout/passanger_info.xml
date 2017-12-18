@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"
+        android:text="乘客信息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@color/colorddd"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        style="@style/infoStyle">
+        <TextView
+            android:id="@+id/tv_name"
+            android:text="乘客姓名"
+            android:textSize="15sp"
+            android:textColor="#313131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/edt_passanger_name"
+            android:layout_toRightOf="@+id/tv_name"
+            android:hint="乘客真实姓名"
+            style="@style/infoEdit" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/colorddd"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        style="@style/infoStyle">
+        <TextView
+            android:id="@+id/tv_phone_num"
+            android:text="手机号"
+            android:textSize="15sp"
+            android:textColor="#313131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edt_passenger_phone"
+            android:imeOptions="actionNext"
+            android:layout_toRightOf="@+id/tv_phone_num"
+            android:inputType="number"
+            android:maxLength="11"
+            android:hint="乘客手机号"
+            style="@style/infoEdit" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/colorddd"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RelativeLayout
+        style="@style/infoStyle">
+        <TextView
+            android:id="@+id/tv_idcard_num"
+            android:text="身份证号"
+            android:textSize="15sp"
+            android:textColor="#313131"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/edt_passanger_idnum"
+            android:imeOptions="actionDone"
+            android:layout_toRightOf="@+id/tv_idcard_num"
+            android:maxLength="18"
+            android:digits="@string/idnum_input_limit"
+            android:hint="乘客身份证号"
+            style="@style/infoEdit" />
+
+    </RelativeLayout>
+</LinearLayout>

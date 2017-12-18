@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle"
+        app:centerText="群设置" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:id="@+id/tv_member_count"
+        style="@style/mineTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight"
+        android:background="@color/white"
+        android:text="群成员" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/page_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:text="群名称"
+            android:textColor="@color/textColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_group_name"
+            style="@style/mineTextStyle.white"
+            android:drawablePadding="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:singleLine="true"
+            android:text="群名称"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/page_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:text="群主"
+            android:textColor="@color/textColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_group_owner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical|right"
+            android:paddingRight="30dp"
+            android:text="刘文雅"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <include layout="@layout/divider_middle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/page_padding">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:text="群简介"
+            android:textColor="@color/textColor"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_group_profile"
+            style="@style/mineTextStyle.white"
+            android:drawablePadding="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center_vertical|right"
+            android:singleLine="true"
+            android:text="群名称"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_allow_enter"
+        style="@style/itemStyle">
+
+        <TextView
+            style="@style/itemTextStyle"
+            android:text="允许加入" />
+
+        <CheckBox
+            android:id="@+id/cb_allow_enter"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/itemStyle">
+
+        <TextView
+            style="@style/itemTextStyle"
+            android:text="消息免打扰" />
+
+        <CheckBox
+            android:id="@+id/cb_silence"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_delete"
+        style="@style/btnStyle.delete"
+        android:text="删除并退出" />
+
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixiangni.app.mine.ThingActivity">
+
+    <!--<com.ixiangni.ui.TopBar-->
+        <!--style="@style/topBarStyle"-->
+        <!--app:centerText="活动公告" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/themeRed">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/page_padding"
+            android:paddingRight="@dimen/page_padding"
+            android:src="@mipmap/back" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_hotel"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="公告"
+                android:textColor="@drawable/sel_red_white_color" />
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_plain"
+                android:button="@null"
+                android:gravity="center"
+                android:text="直播"
+                android:textColor="@drawable/sel_red_white_color" />
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_other"
+                android:button="@null"
+                android:gravity="center"
+                android:text="活动"
+                android:textColor="@drawable/sel_red_white_color" />
+
+
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/radioGroup1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginBottom="5dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:background="@color/themeRed"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio0"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/sel_plain"-->
+            <!--android:button="@null"-->
+            <!--android:checked="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="视频"-->
+            <!--android:textColor="@drawable/sel_red_white_color"-->
+            <!--android:textSize="18dp"-->
+
+            <!--/>-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/sel_plain"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="公告"-->
+            <!--android:textColor="@drawable/sel_red_white_color"-->
+            <!--android:textSize="18dp" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio2"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/sel_plain"-->
+            <!--android:button="@null"-->
+            <!--android:gravity="center"-->
+            <!--android:text="活动"-->
+            <!--android:textColor="@drawable/sel_red_white_color"-->
+            <!--android:textSize="18dp" />-->
+    <!--</RadioGroup>-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/radioGroup1"
+        android:layout_marginBottom="14dp"
+        android:orientation="vertical">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

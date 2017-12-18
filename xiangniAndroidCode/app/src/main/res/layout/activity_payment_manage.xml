@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="支付管理"
+        app:rightText="说明"
+        style="@style/topBarStyle"/>
+
+
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <ListView
+            android:dividerHeight="3dp"
+            android:divider="#f3f4f3"
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.ixiangni.util.StateLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_add_bank_card"
+        android:gravity="center"
+        android:text="添加银行卡"
+        android:layout_marginBottom="20dp"
+        style="@style/btnStyle.margin" />
+</LinearLayout>

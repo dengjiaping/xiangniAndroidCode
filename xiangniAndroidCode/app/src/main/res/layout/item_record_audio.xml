@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_compment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_voice"
+            android:background="@mipmap/yuyinred"
+            android:layout_width="120dp"
+            android:layout_height="42dp">
+
+            <ImageView
+                android:layout_marginLeft="16.5dp"
+                android:src="@mipmap/voicered"
+                android:layout_gravity="center_vertical"
+                android:layout_width="14.5dp"
+                android:layout_height="22dp" />
+            <TextView
+                android:id="@+id/tv_audio_duration"
+                tools:text="12''"
+                android:textSize="14sp"
+                android:textColor="@color/themeRed"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_delete"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="删除"
+            android:paddingTop="10dp"
+            android:paddingLeft="@dimen/page_padding"
+            android:textColor="@color/text_blue"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingRight="@dimen/page_padding"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/ll_voice"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:checked="true"
+                style="@style/rbStyle"
+                android:text="全部可看"
+                android:layout_marginRight="15dp"
+
+                android:id="@+id/rb_all_can_see"
+                 />
+            <RadioButton
+                android:text="好友可看"
+                android:textColor="@color/colorGray"
+                android:id="@+id/rb_friend_can_see"
+                style="@style/rbStyle" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

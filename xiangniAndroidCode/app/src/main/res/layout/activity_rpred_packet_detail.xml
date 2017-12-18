@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_rpred_packet_detail"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.ixiangni.ui.TopBar
+        app:centerText="红包详情"
+        style="@style/topBarStyle"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#21fcfcfc"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                >
+
+                <com.handongkeji.widget.RoundImageView
+                    android:id="@+id/sender_pic"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    app:type="circle"
+                    />
+
+                <TextView
+                    android:id="@+id/sender_name"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/page_padding"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/textColor2"
+                    android:textSize="17sp"
+                    tools:text="二狗子"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_money_greeting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    tools:text="恭喜发财，大吉大利"
+                    android:textColor="@color/textColor2"
+                    android:textSize="14sp"
+                    />
+
+                <TextView
+                    android:id="@+id/luckSum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_horizontal"
+                    tools:text="10000.00元"
+                    android:textColor="@color/textColor2"
+                    android:textSize="20sp"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_surplus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                tools:text="共一个红包"
+                android:textColor="@color/text_color_626262"
+                android:textSize="14sp"
+                />
+
+            <com.handongkeji.widget.AutoListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:listSelector="@drawable/list_item_selector_disable"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

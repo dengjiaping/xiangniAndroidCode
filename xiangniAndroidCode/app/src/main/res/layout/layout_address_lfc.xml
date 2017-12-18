@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:layout_weight="1"
+
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/text_blue"
+        android:textSize="12sp"
+        tools:text="SOHO现代城" />
+
+    <LinearLayout
+        android:id="@+id/ll_lfc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_delete_circle"
+            style="@style/tvCircleStyle"
+            android:text="删除"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_like_count"
+            style="@style/tvCircleStyle"
+            android:drawableLeft="@mipmap/like"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/tv_share_count"
+            style="@style/tvCircleStyle"
+            android:drawableLeft="@mipmap/share"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            style="@style/tvCircleStyle"
+            android:drawableLeft="@mipmap/xiaoxi"
+            android:text="3" />
+    </LinearLayout>
+</LinearLayout>

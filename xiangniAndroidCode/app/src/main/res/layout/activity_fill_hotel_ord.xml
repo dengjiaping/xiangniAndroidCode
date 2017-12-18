@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle"
+        app:centerText="填写订单" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/page_padding">
+
+                <ImageView
+                    android:id="@+id/iv_room"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+
+                    android:layout_marginRight="12dp"
+                    tools:src="@mipmap/photo" />
+
+                <TextView
+                    android:id="@+id/tv_room_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_room"
+                    android:textColor="@color/colorHotel"
+                    android:textSize="@dimen/text_size_16sp"
+                    tools:text="大床房" />
+
+                <TextView
+                    android:id="@+id/tv_room_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_room_type"
+                    android:layout_toRightOf="@+id/iv_room"
+                    android:letterSpacing="0.05"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    tools:text="大床房1.8m  |  18平方米" />
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_date"
+                android:background="@drawable/item_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:id="@+id/tv_ruzhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="入住离店日期"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_days_info"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/tv_ruzhu"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    tools:text="04月18日-04月20日     共2晚" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/jump" />
+
+            </RelativeLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <TextView
+                android:background="@color/white"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:textSize="15sp"
+                android:textColor="@color/colorGray"
+                android:text="入住信息"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:background="@color/colorddd"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <RelativeLayout
+               style="@style/infoStyle">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:text="入住人姓名"
+                    android:textSize="15sp"
+                    android:textColor="#313131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:imeOptions="actionNext"
+                    android:id="@+id/edt_name"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:hint="入住人真实姓名"
+                    style="@style/infoEdit" />
+
+            </RelativeLayout>
+            <View
+                android:background="@color/colorddd"
+                android:layout_marginLeft="@dimen/page_padding"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <RelativeLayout
+                style="@style/infoStyle">
+                <TextView
+                    android:id="@+id/tv_phone_num"
+                    android:text="手机号"
+                    android:textSize="15sp"
+                    android:textColor="#313131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/edt_phone_num"
+                    android:imeOptions="actionNext"
+                    android:layout_toRightOf="@+id/tv_phone_num"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:hint="入住人手机号"
+                    style="@style/infoEdit" />
+
+            </RelativeLayout>
+            <View
+                android:background="@color/colorddd"
+                android:layout_marginLeft="@dimen/page_padding"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <RelativeLayout
+                style="@style/infoStyle">
+                <TextView
+                    android:id="@+id/tv_idcard_num"
+                    android:text="身份证号"
+                    android:textSize="15sp"
+                    android:textColor="#313131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/edt_id_card_num"
+                    android:imeOptions="actionDone"
+                    android:layout_toRightOf="@+id/tv_idcard_num"
+                    android:maxLength="18"
+                    android:hint="入住人身份证号"
+                    style="@style/infoEdit" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/submit_layout"/>
+</LinearLayout>

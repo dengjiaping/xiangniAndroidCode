@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixiangni.app.MainActivity">
+
+    <com.handongkeji.widget.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:background="@color/windowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/divider_match_parent" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/windowBackground" />
+
+
+    <com.nevermore.oceans.widget.BottomTabLayout
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tab_height"
+        android:background="@color/colorWhite">
+        <!--想你-->
+        <com.nevermore.oceans.widget.BottomTabView
+            android:id="@+id/btvHome"
+            style="@style/weight1Style"
+            app:tabIconNormal="@mipmap/homepage"
+            app:tabIconSelected="@mipmap/homepagered"
+            app:tabText="i想你"
+            app:tabTextColorNormal="#999999"
+            app:tabTextColorSelected="@color/themeRed" />
+        <!--通讯录-->
+        <com.nevermore.oceans.widget.BottomTabView
+            android:id="@+id/btv_contact"
+            style="@style/weight1Style"
+            app:tabIconNormal="@mipmap/address_book"
+            app:tabIconSelected="@mipmap/address_bookred"
+            app:tabText="通讯录"
+            app:tabTextColorNormal="#999999"
+            app:tabTextColorSelected="@color/themeRed" />
+        <!--想你圈-->
+        <com.nevermore.oceans.widget.BottomTabView
+            android:id="@+id/btv_circle"
+            style="@style/weight1Style"
+            app:tabIconNormal="@mipmap/xiangniquan"
+            app:tabIconSelected="@mipmap/xiangniquanred"
+            app:tabText="想你圈"
+            app:tabTextColorNormal="#999999"
+            app:tabTextColorSelected="@color/themeRed"/>
+
+
+        <!--我的-->
+        <com.nevermore.oceans.widget.BottomTabView
+            style="@style/weight1Style"
+            app:tabIconNormal="@mipmap/user"
+            app:tabIconSelected="@mipmap/userred"
+            app:tabText="我的"
+            app:tabTextColorNormal="#999999"
+            app:tabTextColorSelected="@color/themeRed" />
+    </com.nevermore.oceans.widget.BottomTabLayout>
+</LinearLayout>

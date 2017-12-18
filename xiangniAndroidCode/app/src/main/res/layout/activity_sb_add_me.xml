@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle"
+        app:centerText="资料详情" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_padding" />
+
+            <include layout="@layout/layout_simple_data" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_padding" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/page_padding">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_round_white"
+                    android:paddingBottom="80dp"
+                    android:paddingLeft="@dimen/dp10"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingTop="@dimen/dp10"
+                    android:text="南岸思雨:请求添加好友" />
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/rect_round_white"
+                    android:text="回复"
+                    android:textColor="@color/textColor2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:text="同意"
+                    style="@style/btnStyle.margin" />
+                <Button
+                    android:text="拒绝"
+                    android:textColor="#444444"
+                    android:background="@drawable/rect_round_white"
+                    android:layout_marginLeft="@dimen/page_padding"
+                    android:layout_marginRight="@dimen/page_padding"
+                    android:layout_marginTop="@dimen/page_padding"
+                    style="@style/btnStyle" />
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="发布语音"
+        app:rightText="发布"
+        style="@style/topBarStyle"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_audio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/voice"
+                layout="@layout/item_record_audio"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/voice"
+                android:id="@+id/tv_select_position"
+                style="@style/selPoiStyle" />
+        </RelativeLayout>
+
+        <com.hyphenate.easeui.widget.EaseVoiceRecorderView
+            android:visibility="invisible"
+            android:id="@+id/record_view"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeightLarge">
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:src="@mipmap/yuyin"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <Button
+            android:clickable="true"
+            android:layout_toRightOf="@id/iv_circle"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/tv_speak"
+            android:text="按住说话"
+            android:textColor="@drawable/sel_press_color"
+            android:background="@drawable/sel_press_stroke"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+
+</LinearLayout>

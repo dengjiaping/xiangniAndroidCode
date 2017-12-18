@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_my_publish"
+        style="@style/mineTextStyle"
+        android:text="我的发布" />
+
+    <include layout="@layout/divider_middle" />
+
+    <TextView
+        android:id="@+id/tv_my_wallet"
+        style="@style/mineTextStyle"
+        android:text="我的钱包" />
+
+    <include layout="@layout/divider_middle" />
+
+    <TextView
+        android:id="@+id/tv_my_file"
+        style="@style/mineTextStyle"
+        android:text="我的文件" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_yx_wq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/page_padding"
+            android:background="@color/windowBackground" />
+
+        <TextView
+            android:id="@+id/tv_bbyx"
+            style="@style/mineTextStyle"
+            android:text="本币运行" />
+
+        <include layout="@layout/divider_middle" />
+
+        <TextView
+            android:id="@+id/tv_wq"
+            style="@style/mineTextStyle"
+            android:text="网上签约" />
+        <include layout="@layout/divider_middle" />
+
+        <TextView
+            android:id="@+id/tv_jn"
+            style="@style/mineTextStyle"
+            android:text="技能认证" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding"
+        android:background="@color/windowBackground" />
+
+    <TextView
+        android:id="@+id/tv_missyou_service"
+        style="@style/mineTextStyle"
+        android:text="想你服务" />
+
+    <include layout="@layout/divider_middle" />
+
+    <TextView
+        android:id="@+id/tv_orders"
+        style="@style/mineTextStyle"
+        android:text="想你订单" />
+
+    <include layout="@layout/divider_middle" />
+
+    <TextView
+        android:id="@+id/tv_online"
+        style="@style/mineTextStyle"
+        android:text="活动公告" />
+
+    <include layout="@layout/divider_middle" />
+
+
+    <TextView
+        android:id="@+id/tv_my_expression"
+        style="@style/mineTextStyle"
+        android:text="表情" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding"
+        android:background="@color/windowBackground" />
+
+
+    <TextView
+        android:id="@+id/tv_setting"
+        style="@style/mineTextStyle"
+        android:text="设置" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ixiangni.app.missyoucircle.CircleFragment">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        style="@style/topBarStyle"
+        app:centerText="想你圈"
+        app:hideBack="true"
+        app:rightText="发布" />
+
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+
+        <com.ixiangni.util.StateLayout
+            android:id="@+id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.ixiangni.util.SmartPullableLayout
+            android:id="@+id/smart_pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:divider="@drawable/rect_divider"
+                android:id="@+id/list_view_circle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </com.ixiangni.util.SmartPullableLayout>
+        </com.ixiangni.util.StateLayout>
+
+    </RelativeLayout>
+
+    <com.clcus.EmojiInpuLayout
+        android:visibility="gone"
+        android:id="@+id/emoji_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+

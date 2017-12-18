@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="订单填写"
+        style="@style/topBarStyle"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:padding="20dp"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/layout_travel"/>
+
+            </FrameLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <include layout="@layout/seat_layout"/>
+            <View
+                android:layout_marginLeft="@dimen/page_padding"
+
+                android:background="@color/colorddd"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <RelativeLayout
+                android:background="@color/white"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/colorGray"
+                    android:text="基建费"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_jijian_price"
+                    android:layout_alignParentRight="true"
+                    android:text="¥15"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <View
+                android:layout_marginLeft="@dimen/page_padding"
+                android:background="@color/colorddd"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:paddingLeft="@dimen/page_padding"
+                android:paddingRight="@dimen/page_padding"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="15sp"
+                    android:textColor="@color/colorGray"
+                    android:text="燃油费"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_alignParentRight="true"
+                    tools:text="¥15"
+                    android:id="@+id/tv_oil_price"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorGray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <include layout="@layout/passanger_info"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <include layout="@layout/submit_layout"/>
+
+
+</LinearLayout>

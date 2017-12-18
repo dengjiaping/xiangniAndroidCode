@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ixiangni.app.contactlist.ContactListFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/themeRed">
+
+        <TextView
+            style="@style/centerTextStyle"
+            android:text="通讯录" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/iv_jia"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/search" />
+
+        <ImageView
+            android:id="@+id/iv_jia"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@mipmap/jia" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ixiangni.util.StateLayout
+            android:id="@+id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.ixiangni.util.SmartPullableLayout
+                android:id="@+id/smart_pull_layout"
+                app:smart_ui_enable_pull_up="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            </com.ixiangni.util.SmartPullableLayout>
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"></ListView>
+
+        </com.ixiangni.util.StateLayout>
+
+
+        <com.handongkeji.widget.SideBar
+            android:id="@+id/side_bar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rect_squar"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:visibility="gone"
+            tools:text="A" />
+    </RelativeLayout>
+
+
+</LinearLayout>

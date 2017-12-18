@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:background="@color/themeRed">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/page_padding"
+            android:paddingRight="@dimen/page_padding"
+            android:src="@mipmap/back" />
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_hotel"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_hotel"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="酒店"
+                android:textColor="@drawable/sel_red_white_color" />
+
+            <RadioButton
+                android:id="@+id/rb_plain"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_plain"
+                android:button="@null"
+                android:gravity="center"
+                android:text="机票"
+                android:textColor="@drawable/sel_red_white_color" />
+
+            <RadioButton
+                android:id="@+id/rb_train"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_train"
+                android:button="@null"
+                android:gravity="center"
+                android:text="火车票"
+                android:textColor="@drawable/sel_red_white_color" />
+
+            <RadioButton
+                android:id="@+id/rb_other"
+                android:layout_width="@dimen/icon_size_50dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/sel_other"
+                android:button="@null"
+                android:gravity="center"
+                android:text="其他"
+                android:textColor="@drawable/sel_red_white_color" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ixiangni.util.StateLayout
+            android:id="@+id/state_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.ixiangni.util.SmartPullableLayout
+                android:id="@+id/smart_pull_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+            </com.ixiangni.util.SmartPullableLayout>
+        </com.ixiangni.util.StateLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_plane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_plane"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_bar_height"
+                android:background="@color/white"
+                app:tabIndicatorColor="@color/themeRed"
+                app:tabSelectedTextColor="@color/themeRed"
+                app:tabTextColor="@color/textColor2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorddd" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_plain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_train"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_train"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_bar_height"
+                android:background="@color/white"
+                app:tabIndicatorColor="@color/themeRed"
+                app:tabSelectedTextColor="@color/themeRed"
+                app:tabTextColor="@color/textColor2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorddd" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_train"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_other"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout_other"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/top_bar_height"
+                android:background="@color/white"
+                android:visibility="gone"
+                app:tabIndicatorColor="@color/themeRed"
+                app:tabSelectedTextColor="@color/themeRed"
+                app:tabTextColor="@color/textColor2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorddd" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager_other"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

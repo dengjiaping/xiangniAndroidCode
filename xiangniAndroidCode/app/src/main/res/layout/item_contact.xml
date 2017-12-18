@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_chat_user"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/contactLayoutStyle">
+    
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        tools:src="@mipmap/qunliao"
+        android:layout_height="40dp" />
+    <TextView
+        tools:text="nick"
+        android:id="@+id/tv_user_nick"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/itemTextSize"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="#515151"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv_select"
+        android:visibility="gone"
+        android:src="@mipmap/pitch_on"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:paddingLeft="@dimen/page_padding"
+        android:layout_height="40dp" />
+</RelativeLayout>

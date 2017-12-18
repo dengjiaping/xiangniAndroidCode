@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixiangni.app.chat.ChatSettingActivity">
+    <com.ixiangni.ui.TopBar
+        app:centerText="聊天设置"
+        style="@style/topBarStyle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height_20" />
+    <RelativeLayout
+        android:padding="@dimen/page_padding"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_centerVertical="true"
+            tools:src="@mipmap/touxaing3"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <TextView
+            android:id="@+id/tv_mark_name"
+            android:textSize="16sp"
+            tools:text="王小明"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="2dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:textColor="@color/textColor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_sign"
+            android:paddingLeft="10dp"
+            tools:text="昵称：南岸思雨"
+            android:textColor="@color/textLightColor"
+            android:layout_below="@+id/tv_mark_name"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height_20" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:orientation="horizontal"
+            style="@style/itemStyle">
+
+            <TextView
+                android:text="置顶聊天"
+                style="@style/itemTextStyle" />
+
+            <CheckBox
+
+                android:id="@+id/cb_set_message_top"
+                style="@style/switchStyle" />
+
+        </RelativeLayout>
+        <include layout="@layout/divider_middle"/>
+        <RelativeLayout
+            android:orientation="horizontal"
+            style="@style/itemStyle">
+
+            <TextView
+                android:text="消息免打扰"
+                style="@style/itemTextStyle" />
+
+            <CheckBox
+                android:id="@+id/cb_msg_disable"
+                style="@style/switchStyle" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"/>
+
+       <TextView
+           android:id="@+id/tv_empty_history"
+           android:text="清空聊天记录"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/itemHeight"
+           android:gravity="center_vertical"
+           android:paddingLeft="@dimen/page_padding"
+           android:textSize="@dimen/text_size_16sp"
+           android:textColor="@color/textColor2"
+           android:background="@drawable/item_bg" />
+
+    </LinearLayout>
+
+</LinearLayout>

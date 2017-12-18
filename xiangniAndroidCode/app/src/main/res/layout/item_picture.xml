@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp">
+    <ImageView
+        android:src="@mipmap/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:text="2017-6-21"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:background="#60000000"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+</RelativeLayout>

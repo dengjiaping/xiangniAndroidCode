@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/digCommentBody"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/comment_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.ixiangni.ui.FlowLayout
+        android:id="@+id/flow_layout"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </com.ixiangni.ui.FlowLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_comment_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <include layout="@layout/divider_match_parent"/>
+    <com.ixiangni.ui.CommentListView
+        android:background="@color/white"
+        android:id="@+id/commentList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        app:item_color="#60000000"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        />
+    </LinearLayout>
+</LinearLayout>

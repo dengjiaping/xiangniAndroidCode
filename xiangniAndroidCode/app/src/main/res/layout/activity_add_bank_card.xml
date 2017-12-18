@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="添加银行卡"
+        style="@style/topBarStyle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <LinearLayout
+        style="@style/itemStyle.withpadding">
+
+        <TextView
+            android:text="开户银行名称"
+            style="@style/personStyle" />
+        <EditText
+            android:imeOptions="actionNext"
+            android:id="@+id/edt_bank_name"
+            android:singleLine="true"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+    <LinearLayout
+        style="@style/itemStyle.withpadding">
+
+        <TextView
+            android:text="银行卡号"
+            style="@style/personStyle" />
+
+        <EditText
+            android:layout_weight="2"
+            android:inputType="number"
+            android:maxLength="19"
+            android:layout_width="0dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:background="@color/white"
+            android:layout_height="match_parent"
+            android:id="@+id/edt_bank_card_num" />
+    </LinearLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+    <LinearLayout
+
+        style="@style/itemStyle.withpadding">
+
+        <TextView
+            android:text="持卡人姓名"
+            style="@style/personStyle" />
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_weight="2"
+            android:singleLine="true"
+
+            android:imeOptions="actionDone"
+            android:layout_width="0dp"
+            android:background="@color/white"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_add"
+        android:text="添加 "
+        android:gravity="center"
+        style="@style/btnStyle.margin" />
+
+</LinearLayout>

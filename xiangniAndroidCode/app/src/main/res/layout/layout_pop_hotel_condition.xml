@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_margin="@dimen/page_padding"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.ixiangni.ui.FlowLayout
+            android:id="@+id/fl_price"
+            app:horspac="@dimen/dp10"
+            app:verspac="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.ixiangni.ui.FlowLayout
+            android:id="@+id/fl_star"
+            app:horspac="@dimen/dp10"
+            app:verspac="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <View
+        android:background="@color/colorGray"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeightLarge">
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:text="取消"
+            android:textColor="@color/themeRed"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="@dimen/icon_size_50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_complete"
+            android:background="@color/themeRed"
+            android:text="完成"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="@dimen/icon_size_50dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

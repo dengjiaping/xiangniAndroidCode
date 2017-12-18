@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--app:rightText="说明"-->
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        style="@style/topBarStyle"
+        app:centerText="我要充值" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+
+    <LinearLayout style="@style/itemStyle.withpadding">
+
+        <TextView
+            style="@style/personStyle"
+            android:text="企业一卡通" />
+
+        <TextView
+            android:id="@+id/tv_bank_card"
+            android:textColor="#239def"
+            android:text=""
+            style="@style/personStyle.rightarrow"
+            android:ellipsize="end"
+            android:singleLine="true" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="11dp"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingTop="11dp"
+        android:textColorHint="#000000"
+        app:hintTextAppearance="@style/hintTextApperanceStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edt_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="充值金额"
+            android:inputType="numberDecimal"
+            android:paddingTop="@dimen/page_padding"
+            android:textColorHighlight="#ff7200"
+            android:textCursorDrawable="@drawable/rect_cursor"
+            android:textSize="15sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+
+    <LinearLayout style="@style/itemStyle.withpadding">
+
+        <TextView
+            style="@style/personStyle"
+            android:text="支付密码" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:inputType="textPassword"
+                android:textColorHighlight="#ff7200"
+                android:textCursorDrawable="@drawable/rect_cursor" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingTop="5dp"
+        android:text="忘记密码"
+        android:textColor="@color/text_blue"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="扣款账户暂仅支持本人的企业一卡通"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_get_cash"
+        style="@style/btnStyle.margin"
+        android:text="马上充值" />
+
+
+</LinearLayout>

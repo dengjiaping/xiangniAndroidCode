@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="发红包"
+        style="@style/topBarStyle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="23dp" />
+
+    <EditText
+        android:id="@+id/edt_money"
+        android:background="@drawable/rect_round_white"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:textSize="14sp"
+        android:layout_marginRight="@dimen/page_padding"
+        android:padding="@dimen/dp10"
+        android:hint="金额"
+        android:inputType="numberDecimal"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeightLarge" />
+
+    <EditText
+        android:id="@+id/edt_extra_message"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/rect_round_white"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:textSize="14sp"
+        android:layout_marginRight="@dimen/page_padding"
+        android:padding="@dimen/dp10"
+        android:hint="留言"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="90dp" />
+    <TextView
+        android:id="@+id/tv_usable_coin"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="23dp"
+        android:textColor="@color/themeRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_send"
+        android:text="塞钱进红包"
+        style="@style/btnStyle.margin" />
+
+
+</LinearLayout>

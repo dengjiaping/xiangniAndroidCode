@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:background="@color/windowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight">
+        <TextView
+            android:textSize="@dimen/itemTextSize"
+            android:text="消息提醒"
+            android:textColor="@color/textColor"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/page_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+        <CheckBox
+            android:id="@+id/switch_message"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_change_password"
+        android:text="修改密码/支付密码"
+        style="@style/mineTextStyle" />
+    <include layout="@layout/divider_middle"/>
+
+    <TextView
+        android:id="@+id/tv_back_list"
+        android:text="黑名单"
+        style="@style/mineTextStyle" />
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_secret"
+        android:text="隐私"
+        style="@style/mineTextStyle" />
+    <View
+        android:background="@color/windowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <TextView
+        android:id="@+id/tv_help_center"
+        android:text="帮助中心"
+        style="@style/mineTextStyle" />
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_about_us"
+        android:text="关于我们"
+        style="@style/mineTextStyle" />
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_contact_us"
+        android:text="联系我们"
+        style="@style/mineTextStyle" />
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_suggest_feedback"
+        android:text="意见反馈"
+        style="@style/mineTextStyle" />
+    <View
+        android:background="@color/windowBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight">
+        <TextView
+            android:id="@+id/tv_clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_16sp"
+            android:textColor="@color/textColor"
+            android:paddingLeft="@dimen/page_padding"
+            android:background="@drawable/item_bg"
+            android:text="清除本地缓存"
+            android:drawableRight="@null" />
+        <TextView
+            android:id="@+id/tv_cache_size"
+            android:text="20.0M"
+            android:textSize="15sp"
+            android:paddingRight="@dimen/page_padding"
+            android:drawablePadding="@dimen/dp10"
+            android:drawableRight="@mipmap/jump"
+            android:textColor="@color/colorGray"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <include layout="@layout/divider_middle"/>
+    <TextView
+        android:id="@+id/tv_check_update"
+        android:text="检查更新"
+        style="@style/mineTextStyle" />
+    <RelativeLayout
+        android:background="@color/windowBackground"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_marginTop="40dp"
+            android:text="退出登录"
+            android:textSize="18sp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:textColor="@color/textLightColor"
+            android:background="@drawable/rect_round_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_bar_height" />
+
+    </RelativeLayout>
+
+</LinearLayout>

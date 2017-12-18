@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:background="@drawable/rect_round_white"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_finger"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/fingerprint35"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/tv_finger"
+        android:layout_below="@+id/iv_finger"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/color333"
+        android:text="请验证指纹"
+        android:paddingBottom="@dimen/page_padding"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rongxin.www.netsignlite.activity.QYFaileActivity">
+    <RelativeLayout
+        android:background="@color/libThemeRed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/iv_back"
+            android:paddingLeft="10dp"
+            android:paddingBottom="18dp"
+            android:paddingTop="18dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/btn_back_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="签约结果"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+    <ImageView
+        android:scaleType="fitXY"
+        android:src="@drawable/fail"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+    <ScrollView
+        android:background="#fff"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+        <TextView
+            android:id="@+id/tv_why"
+            android:layout_margin="10dp"
+            android:text="失败原因：
+就仨都放假啊是劳动纠纷啦
+hjksahfkjas"
+            android:textSize="18dp"
+            android:textColor="#e70d0d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_know"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="25dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="知道了"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/btn_submit_again"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="重新提交"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="想你服务"
+        style="@style/topBarStyle"/>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:padding="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_hotel"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/hotel"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+            <TextView
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/textColor"
+                android:text="预订酒店"
+                android:layout_marginTop="@dimen/page_padding"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_airplane"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding"
+
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+
+                android:src="@mipmap/airplane"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+            <TextView
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/textColor"
+                android:text="飞机票"
+                android:layout_marginTop="@dimen/page_padding"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_train"
+            android:padding="@dimen/page_padding"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/train"
+                android:layout_width="28dp"
+                android:layout_height="28dp" />
+            <TextView
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/textColor"
+                android:text="火车票"
+                android:layout_marginTop="@dimen/page_padding"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_tel_cz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding">
+
+            <ImageView
+                android:id="@+id/imageView2"
+
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/telcz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/page_padding"
+                android:text="手机充值"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_game"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding">
+
+            <ImageView
+                android:layout_width="28dp"
+
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/game" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/page_padding"
+                android:text="游戏"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size_16sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_live"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg"
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding">
+
+            <ImageView
+                android:layout_width="28dp"
+
+                android:layout_height="28dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/live" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/page_padding"
+                android:text="生活自用"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/text_size_16sp" />
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

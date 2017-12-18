@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="上传文字"
+        app:rightText="上传"
+        style="@style/topBarStyle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/page_padding" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingRight="@dimen/page_padding"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:layout_marginTop="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_content"
+            android:gravity="left"
+            android:textColor="@color/textColor"
+            android:hint="说点什么..."
+            android:textSize="14sp"
+            android:padding="@dimen/dp10"
+            android:background="@drawable/rect_round_white"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+        </LinearLayout>
+
+
+
+</LinearLayout>

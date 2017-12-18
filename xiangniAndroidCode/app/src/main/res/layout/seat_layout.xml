@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="@dimen/page_padding"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#999999"
+        android:text="坐席"
+        />
+
+    <TextView
+        android:id="@+id/tv_cab_name"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/ll_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        tools:text="经济舱"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_price"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="¥"
+            android:textSize="10sp"
+            android:textColor="@color/colorPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_policy_price"
+            android:text="150"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

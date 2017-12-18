@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DFDFDF"
+    android:orientation="vertical"
+    tools:context="com.mydemo.yuanxin.activity.YXCardActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/libThemeRed"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:text="企业一卡通"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:paddingBottom="18dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="18dp"
+            android:src="@drawable/btn_back_white" />
+
+        <Button
+            android:id="@+id/button_Record"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:text="明细"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/libThemeRed"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="20dp"
+                            android:text="银信币余额"
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/tv_balance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="20dp"
+                            android:textColor="#fff"
+                            android:textSize="50dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#1b4bfa"
+                        android:paddingLeft="6dp">
+
+                        <TextView
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="6dp"
+                            android:gravity="center|left"
+                            android:text="卡号:"
+                            android:textColor="#fff"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            android:id="@+id/tv_card_num"
+                            android:layout_width="250dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:text=""
+                            android:textColor="#fff"
+                            android:textSize="18dp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:gravity="center|left"
+                            android:text=""
+                            android:textColor="#fff"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/cz"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/cz" />
+
+                        <Button
+                            android:id="@+id/bbzz"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/zz" />
+
+
+                        <Button
+                            android:id="@+id/wytx"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/tx" />
+
+
+                        <Button
+                            android:id="@+id/jyjl"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/jyjl" />
+
+                        <Button
+                            android:id="@+id/gm"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/gm"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:text="客服电话:400-000-1111"
+                            android:textColor="#979595"
+                            android:textSize="12dp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ixiangni.app">
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 获取摄像头的信息的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 指纹识别 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission." />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppCommonTheme"
+        tools:replace="android:theme">
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 百度秘钥 -->
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="pljKhkyYw8w8zIjHbiH0mnXip9khn9GP" /> -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="srzuMPbmOGgBakTVNXVG0Ajl0aCBWKhx" />
+        <!-- <meta-data -->
+        <!-- android:name="com.baidu.lbsapi.API_KEY" -->
+        <!-- android:value="hG8G4PfTVCy8nSmsi0oUF9zshjk3kNeO" /> -->
+
+
+        <!-- 友盟key -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5976e69dc62dca0ca30015a3" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="c61cec8755d85613302568532c3438db" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Wandoujia" />
+
+        <!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; -->
+
+        <provider
+            android:name=".XNFileProvider"
+            android:authorities="com.ixiangni.app.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picture_paths"
+                tools:replace="name,resource" />
+        </provider>
+
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1141170622178761#ixiangniapp" />
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".StartPageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustPan" />
+        <!-- 设置 -->
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait" />
+        <!-- 找回密码 -->
+        <activity
+            android:name=".user.FindPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 消息详情 -->
+        <activity android:name=".message.MessageDetailActivity" />
+        <!-- 消息中心 -->
+        <activity android:name=".message.MessageCenterActivity" />
+        <!-- 群简介 -->
+        <activity
+            android:name=".chat.GroupProfileActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <!-- 添加朋友 -->
+        <activity android:name=".chat.AddFriendsActivity" />
+        <!-- 群成员 -->
+        <activity android:name=".chat.GroupMembersActivity" />
+        <!-- 群名称 -->
+        <activity
+            android:name=".chat.GroupNameActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <!-- 聊天设置 -->
+        <activity android:name=".chat.ChatSettingActivity" />
+        <!-- 移除好友 -->
+        <activity android:name=".chat.RemoveFriendsActivity" />
+        <!-- 转账 -->
+        <activity android:name=".money.TransferActivity" />
+        <!-- 充值 -->
+        <activity android:name=".money.CZXNQBActivity" />
+        <!-- 转账详情 -->
+        <activity android:name=".money.TransferDetailActivity" />
+        <!-- 支付说明 -->
+        <activity android:name=".money.PaymentActivity" />
+        <!-- 修改手机号 -->
+        <activity android:name=".user.ChangePhoneActivity" />
+        <!-- 个人信息 -->
+        <activity android:name=".user.PersonalInfoActivity" />
+        <!-- 编辑 -->
+        <activity android:name=".user.EditAddressActivity" />
+        <!-- 投诉 -->
+        <activity android:name=".setting.ComplainActivity" />
+        <activity android:name=".chat.DataSettingActivity" />
+        <activity android:name=".chat.GroupSettingActivity" />
+        <activity android:name=".chat.CreatGroupActivity" />
+        <activity android:name=".setting.PrivacyActivity" />
+        <activity android:name=".setting.AboutUsActivity" />
+        <activity android:name=".setting.ContactActivity" />
+        <activity android:name=".user.ModifyPasswordActivity" />
+        <activity android:name=".setting.FeedBackActivity" />
+        <!-- 个人主页 -->
+        <activity
+            android:name=".user.PersonPageActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity android:name=".publish.PublishAudioActivity" />
+        <activity android:name=".publish.PublishWordActivity" />
+        <activity android:name=".missyouservice.MissyouServiceActivity" />
+        <activity android:name=".money.BusinessRecordActivity" />
+        <activity android:name=".money.MineWalletActivity" />
+        <activity android:name=".publish.PicturePreviewActivity" />
+        <activity android:name=".publish.PictureTagActivity" />
+        <activity android:name=".mine.EmotionActivity" />
+        <activity
+            android:name=".publish.PublishVideoActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".mine.LiveActivity" />
+        <activity android:name=".contactlist.NearbyPeopleActivity" />
+        <activity android:name=".mine.MyEmotionActivity" />
+        <activity android:name=".mine.CreateDirActivity" />
+        <!-- 我的文件 -->
+        <activity android:name=".mine.MyFilesActivity" />
+
+        <!-- 视频录制 -->
+        <activity android:name="com.hyphenate.chatuidemo.ui.RecorderVideoActivity" />
+        <activity android:name=".mine.FileBrwseActivity" />
+        <activity android:name=".publish.UploadtextActivity" />
+        <activity android:name="com.hyphenate.chatuidemo.ui.PickAtUserActivity" />
+        <activity
+            android:name=".publish.ImageBrowserActivity1"
+            android:theme="@style/blackStatusTheme" />
+        <!-- 聊天 -->
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.ChatActivity"
+            android:launchMode="singleTask" />
+        <activity android:name="com.hyphenate.chatuidemo.ui.ImageGridActivity" />
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.VideoCallActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseBaiduMapActivity" />
+        <activity android:name="com.hyphenate.chatuidemo.ui.ContextMenuActivity" />
+
+        <!-- 发红包页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPRedPacketActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <!-- 红包详情页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 红包记录页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPRecordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 群成员列表页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPGroupMemberActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 支付宝H5支付页面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 支付宝H5授权页面 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <!-- 钱包版需在此基础上额外添加以下activity的声明 -->
+
+
+        <!-- WebView相关页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPWebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 零钱页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPChangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- 银行卡页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPBankCardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- 转账页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPTransferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <!-- 转账详情页面 -->
+        <activity
+            android:name="com.easemob.redpacketui.ui.activity.RPTransferDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".contactlist.SearchContactsActivity" />
+        <activity android:name=".chat.RefuseActivity" />
+        <activity android:name=".chat.SbAddMeActivity" />
+        <activity android:name=".chat.AddSbActivity" />
+        <activity android:name=".money.IWantChargeActivity" />
+        <activity android:name=".money.SelectBankCardActivity" />
+        <activity android:name=".money.IWantCashActivity" />
+        <activity android:name=".money.IWantCZActivity" />
+        <!-- 添加银行卡 -->
+        <activity
+            android:name=".money.AddBankCardActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <!-- 支付管理 -->
+        <activity android:name=".money.PaymentManageActivity" />
+        <activity android:name=".money.RedPackageActivity" />
+        <activity android:name=".chat.AgreeActivity" />
+        <activity android:name=".contactlist.BlackListActivity" />
+        <activity android:name=".user.PhotoAlbumActivity" />
+        <activity android:name=".user.SearchUserActivity" />
+        <activity android:name=".publish.MyPublishListActivity" />
+        <activity android:name=".publish.BaiduMapActivity" />
+        <activity android:name=".publish.PublishPictActivity" />
+        <activity android:name=".publish.RecordVideoActivity" />
+        <activity
+            android:name=".publish.PlayVideoActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity android:name=".publish.AdvancedPlayActivity" />
+        <activity android:name=".chat.GroupActivity" />
+        <activity android:name=".chat.AddmemberActivity" />
+        <activity android:name=".chat.AddGroupActivity" />
+        <activity android:name=".chat.SearchGroupActivity" />
+        <activity android:name=".money.RPRedPacketDetailActivity" />
+
+        <!-- *************************环信ui************************** -->
+        <activity
+            android:name="com.hyphenate.easeui.ui.EaseShowBigImageActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity android:name="com.hyphenate.easeui.ui.EaseShowVideoActivity" />
+        <activity
+            android:name="com.hyphenate.chatuidemo.ui.VoiceCallActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity
+            android:name=".publish.LocalVideoActivity"
+            android:theme="@style/blackStatusTheme" />
+        <activity android:name=".mine.RecordAudioActivity" />
+        <activity android:name=".setting.HelpCenterActivity" />
+        <activity android:name=".missyouservice.HotelListActivity" />
+        <activity android:name=".missyouservice.AirplaneTicketActivity" />
+        <activity android:name=".missyouservice.TrainTicketActivity" />
+        <activity android:name=".mine.MyOrderActivity" />
+        <activity android:name=".missyouservice.HotelDetailActivity" />
+        <activity android:name=".orders.OrdHotelDetailActivity" />
+        <activity android:name=".orders.OrdPlaneDetailActivity" />
+        <activity android:name=".missyouservice.CityListActivity" />
+        <activity
+            android:name=".missyouservice.FillHotelOrdActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".missyouservice.PTListActivity" />
+        <activity android:name=".missyouservice.TTListActivity" />
+        <activity
+            android:name=".missyouservice.FillTrainOrdActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".missyouservice.FillPlaneOrdActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".orders.OrdTrainDetailActivity" />
+        <activity android:name=".missyouservice.PlaneTicketDtlActivity" />
+        <activity android:name=".missyouservice.CityList0Activity" />
+        <activity android:name=".missyouservice.SelectTimeActivity" />
+        <activity android:name=".chat.TousuActivity" />
+        <!-- 修改备注名 -->
+        <activity
+            android:name=".chat.ChangeRdNameActivity"
+            android:windowSoftInputMode="adjustPan|stateVisible" />
+        <activity android:name=".GuidActivity" />
+        <activity android:name=".chat.QunjianjieActivity" />
+
+        <provider
+            android:name="com.umeng.message.provider.MessageProvider"
+            android:authorities="${applicationId}.umeng.message"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
+
+        <activity android:name=".missyouservice.CabActivity" />
+        <activity android:name=".message.MsgDetailActivity" />
+        <activity android:name=".publish.VideoViewActivity" />
+        <activity android:name=".money.GroupRPActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".user.BigTouxiangActivity" />
+        <activity android:name=".mine.ThingActivity" />
+        <activity android:name=".mine.JiNengRenZhengActivity" />
+        <activity android:name=".emotion.BroughtEmActivity"
+            android:screenOrientation="portrait"
+            ></activity>
+    </application>
+
+</manifest>

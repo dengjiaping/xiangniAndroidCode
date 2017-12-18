@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="上传语音"
+        app:rightText="上传"
+        style="@style/topBarStyle"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_voice"
+        android:layout_below="@+id/top_bar"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingTop="@dimen/dp10"
+        android:paddingBottom="@dimen/dp10"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_voice"
+            android:background="@mipmap/yuyinred"
+            android:layout_width="120dp"
+            android:layout_height="42dp">
+
+            <ImageView
+                android:layout_marginLeft="16.5dp"
+                android:src="@mipmap/voicered"
+                android:layout_gravity="center_vertical"
+                android:layout_width="14.5dp"
+                android:layout_height="22dp" />
+            <TextView
+                android:id="@+id/tv_audio_duration"
+                android:textSize="14sp"
+                android:textColor="@color/themeRed"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_delete"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="删除"
+            android:paddingTop="10dp"
+            android:paddingLeft="@dimen/page_padding"
+            android:textColor="@color/text_blue"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingRight="@dimen/page_padding"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <com.hyphenate.easeui.widget.EaseVoiceRecorderView
+        android:id="@+id/record_view"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeightLarge">
+        <ImageView
+            android:id="@+id/iv_circle"
+            android:src="@mipmap/yuyin"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <Button
+            android:clickable="true"
+            android:layout_toRightOf="@id/iv_circle"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/btn_record"
+            android:text="按住说话"
+            android:textColor="@drawable/sel_press_color"
+            android:background="@drawable/sel_press_stroke"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

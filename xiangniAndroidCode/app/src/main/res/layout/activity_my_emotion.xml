@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="我的表情"
+        app:rightText="编辑"
+        style="@style/topBarStyle"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabBackground="@color/white"
+        app:tabIndicatorColor="@color/themeRed"
+        app:tabIndicatorHeight="2dp"
+        app:tabTextColor="@color/textColor"
+        app:tabSelectedTextColor="@color/themeRed"
+        app:tabTextAppearance="@style/tabTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+
+</LinearLayout>

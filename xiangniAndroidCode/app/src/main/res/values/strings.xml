@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">i想你</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="filetype">
+        <item>图片</item>
+        <item>文字</item>
+        <item>视频</item>
+        <item>音频</item>
+    </string-array>
+
+    <!-- SmartPullableLayout -->
+    <string name="smart_ui_pull_down_normal">下拉刷新</string>
+    <string name="smart_ui_pull_down_release_able">释放刷新</string>
+    <string name="smart_ui_pull_down_release">正在刷新</string>
+    <string name="smart_ui_pull_up_normal">上拉加载更多</string>
+    <string name="smart_ui_pull_up_release_able">释放进行加载</string>
+    <string name="smart_ui_pull_up_release">正在加载中...</string>
+
+    <!-- SmartLoadingLayout -->
+    <string name="smart_ui_loading_layout_on_loading">加载中</string>
+    <string name="smart_ui_loading_layout_on_empty">这里还没有内容!</string>
+    <string name="smart_ui_loading_layout_on_error">哎呀！内容出错了！</string>
+    <string name="smart_ui_loading_layout_try_refresh">重 试</string>
+
+    <string name="group_menber">群成员(%1$s)</string>
+
+
+    <string name="redpacket_sum">.0123456789</string>
+
+    <string name="red_packet_hint0">当前为普通红包，</string>
+    <string name="red_packet_hint1">当前为拼手气红包，</string>
+    <string name="change_red_packet_type">改为%1$s</string>
+    <string name="signMoney">单个金额:</string>
+    <string name="totalMoney">总金额 拼:</string>
+
+    <string name="coinName">银信币</string>
+
+    <string name="red_packet_sum">¥%1$2.2f</string>
+    <string name="msg_detial">消息详情</string>
+    <string name="member_num">本群共有%1$d人</string>
+
+    <string name="ixn_yxb">银信币:%1$s</string>
+    <string name="notSet">未填写</string>
+    <string name="rmb">¥</string>
+    <string name="idnum_input_limit">0123456789X</string>
+    <string name="no_pay">待付款</string>
+    <string name="yes_pay">已付款</string>
+    <string name="pay_fail">付款失败</string>
+    <string name="regist_succeed">退票成功</string>
+    <string name="out_ing">出票中</string>
+    <string name="out_succeed">出票成功</string>
+    <string name="out_fail">出票失败</string>
+    <string name="quit_ing">退票中</string>
+
+
+    <array name="orderType">
+        <item>全部</item>
+        <!--<item>待付款</item>-->
+        <!--<item>已付款</item>-->
+        <item>出票中</item>
+        <item>已出票</item>
+        <item>退票中</item>
+        <item>已退票</item>
+    </array>
+
+</resources>

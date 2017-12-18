@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <com.ixiangni.ui.PercentRelativeLayout
+        app:fixFlag="height"
+        app:heightSize="3"
+        app:widthSize="4"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp">
+        <ImageView
+            android:src="@mipmap/photo"
+            android:id="@+id/iv_hotel_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.ixiangni.ui.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/tv_hotel_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#313131"
+            android:textSize="@dimen/text_size_16sp"
+            tools:text="沈阳酒店" />
+
+        <com.ixiangni.app.StarLayout
+            android:id="@+id/star_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/tv_hotel_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:text="沈阳酒店" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginRight="5dp"
+        android:id="@+id/tv_hotel_price"
+        android:textColor="#e35252"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="$10000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

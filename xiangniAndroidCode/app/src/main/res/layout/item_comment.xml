@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/commentTv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:background="@drawable/item_bg"
+    android:lineSpacingMultiplier="1.1"
+    android:textColor="@color/text_color_9a9a9a"
+    android:text="1"
+    android:textSize="12sp" />

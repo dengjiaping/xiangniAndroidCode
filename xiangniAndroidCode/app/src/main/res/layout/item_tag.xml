@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/sel_tag"
+    android:id="@+id/tv_tag"
+    android:text="不限"
+    android:textColor="@drawable/sel_tag_color"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:textSize="14sp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+

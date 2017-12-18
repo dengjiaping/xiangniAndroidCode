@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="钱包"
+        app:rightText="交易记录"
+        style="@style/topBarStyle"/>
+
+
+    <RelativeLayout
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_usable_coin"
+            android:textSize="30sp"
+            tools:text="3000.0"
+            android:textColor="@color/textColor"
+            android:layout_centerHorizontal="true"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingTop="5dp"
+            android:text="可用银信币"
+            android:textSize="15sp"
+            android:layout_below="@+id/tv_usable_coin"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/textLightColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <com.ixiangni.util.SmartPullableLayout
+            android:id="@+id/smart_pull_layout"
+            app:smart_ui_enable_pull_up="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </com.ixiangni.util.SmartPullableLayout>
+
+
+    </com.ixiangni.util.StateLayout>
+    <include layout="@layout/divider_match_parent"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tab_height">
+        <TextView
+            android:id="@+id/tv_get_cash"
+            android:text="我要提现"
+            android:drawableTop="@mipmap/tixian"
+            style="@style/walletTabStyle" />
+        <TextView
+            android:id="@+id/tv_charge"
+            android:drawableTop="@mipmap/chongzhi"
+            android:text="我要充值"
+            style="@style/walletTabStyle" />
+        <TextView
+            android:id="@+id/tv_payment_manage"
+            android:drawableTop="@mipmap/zhifuguanli"
+            android:text="支付管理"
+            style="@style/walletTabStyle" />
+
+    </LinearLayout>
+</LinearLayout>

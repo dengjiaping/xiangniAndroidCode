@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/rect_round_white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="上传照片"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/themeRed"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight" />
+    <include layout="@layout/divider_match_parent"/>
+    <TextView
+        android:id="@+id/tv_local_img"
+        android:text="选择本地图片"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/textColor2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight" />
+    <include layout="@layout/divider_match_parent"/>
+    <TextView
+        android:id="@+id/tv_take_picture"
+        android:text="拍照"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/textColor2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight" />
+    <include layout="@layout/divider_match_parent"/>
+    <TextView
+        android:id="@+id/tv_look_picture"
+        android:text="查看头像"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/textColor2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeight" />
+
+</LinearLayout>

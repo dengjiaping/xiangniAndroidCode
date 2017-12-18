@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.rxph.www.wq2017">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".activity.WQMainActivity">
+        </activity>
+        <activity android:name=".registActivity.RegistWordActivity" />
+        <activity android:name=".registActivity.PhotoActivity" />
+        <activity android:name=".registActivity.ClauseActivity" />
+        <activity android:name=".registActivity.InfoCheckActivity" />
+        <activity android:name=".registActivity.ResultActivity" />
+        <activity android:name=".activity.FeedbackActivity" />
+        <activity android:name=".activity.MyNetSignActivity" />
+        <activity android:name=".activity.QuestionActivity" />
+
+        <provider
+            android:name=".utils.WqFileProvider"
+            android:authorities="com.rx.www.netsignnewlib"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".activity.QYFaileActivity"></activity>
+    </application>
+
+
+</manifest>

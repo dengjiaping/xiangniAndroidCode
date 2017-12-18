@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle">
+        <TextView
+
+            android:id="@+id/tv_current_city"
+            android:text="北京"
+            style="@style/centerTextStyle"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/down"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+    </com.ixiangni.ui.TopBar>
+    <com.ixiangni.ui.HotelFilterView
+        android:id="@+id/hotel_filter_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/itemHeightLarge"/>
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.ixiangni.util.SmartPullableLayout
+            android:id="@+id/smart_pull_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.ixiangni.util.SmartPullableLayout>
+
+
+    </com.ixiangni.util.StateLayout>
+
+
+
+</LinearLayout>

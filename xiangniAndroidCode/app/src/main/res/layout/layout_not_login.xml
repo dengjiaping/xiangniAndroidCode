@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_not_login"
+    android:background="@mipmap/loginbg"
+    android:layout_width="match_parent"
+    android:layout_height="183dp">
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/page_padding"
+        android:src="@mipmap/back2"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/page_padding"
+        android:src="@mipmap/setting"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/iv_not_login"
+        android:src="@mipmap/touxiangmoren"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/btn_login_now"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/iv_not_login"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:text="马上登录"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/rect_round_red"
+        android:layout_centerHorizontal="true"
+        android:layout_width="90dp"
+        android:layout_height="30dp" />
+</RelativeLayout>

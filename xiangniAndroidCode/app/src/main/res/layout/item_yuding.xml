@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="@dimen/page_padding"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_room"
+        tools:src="@mipmap/photo"
+        android:layout_marginRight="12dp"
+        android:layout_width="80dp"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/tv_room_type"
+        android:layout_toRightOf="@+id/iv_room"
+        tools:text="大床房"
+        android:textSize="@dimen/text_size_16sp"
+        android:textColor="@color/colorHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_room_size"
+        android:layout_toRightOf="@+id/iv_room"
+        android:layout_below="@+id/tv_room_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:letterSpacing="0.05"
+        tools:text="大床房1.8m  |  18平方米"
+        />
+    <TextView
+        android:id="@+id/tv_price"
+        android:textColor="@color/colorPrice"
+        android:layout_toRightOf="@+id/iv_room"
+        android:layout_below="@+id/tv_room_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_yuding"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="预定"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:textColor="@color/white"
+        android:background="@drawable/rect_ea5413"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

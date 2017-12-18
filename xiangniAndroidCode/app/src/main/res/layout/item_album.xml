@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/page_padding"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_date"
+        android:src="@mipmap/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingLeft="@dimen/dp10"
+        android:layout_toRightOf="@+id/iv_date"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time"
+            android:text="10分钟前"
+            android:paddingBottom="5dp"
+            android:textColor="#111111"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="@color/textLightColor"
+            android:textSize="12sp"
+            android:lineSpacingExtra="4dp"
+            android:text="终于放假了，来了一场说走就走的旅行，阳光明媚，心情美好sssss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <include layout="@layout/layout_comment"/>
+        <LinearLayout
+            android:layout_marginTop="@dimen/page_padding"
+            android:layout_gravity="right"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="1"
+                android:drawableLeft="@mipmap/like"
+                style="@style/tvCircleStyle"/>
+            <TextView
+                android:text="0"
+                android:id="@+id/tv_share"
+                android:drawableLeft="@mipmap/share"
+                style="@style/tvCircleStyle" />
+            <TextView
+                android:text="3"
+                android:id="@+id/tv_comment"
+                android:drawableLeft="@mipmap/xiaoxi"
+                style="@style/tvCircleStyle" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

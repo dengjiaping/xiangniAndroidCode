@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/layout_person_profile" />
+
+        <RelativeLayout
+            android:id="@+id/rl_phone"
+            style="@style/itemStyle">
+            <TextView
+                android:text="电话"
+                style="@style/itemTextStyle" />
+            <TextView
+                android:id="@+id/tv_phone_num"
+                tools:text="18771092947"
+                style="@style/rightTextStyle" />
+        </RelativeLayout>
+        <include layout="@layout/divider_middle"/>
+        <RelativeLayout
+            style="@style/itemStyle">
+            <TextView
+                android:id="@+id/tv_area_title"
+                android:text="地区"
+                style="@style/itemTextStyle" />
+            <TextView
+                android:layout_toRightOf="@+id/tv_area_title"
+                android:gravity="right"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/tv_area"
+                tools:text="北京，朝阳"
+                style="@style/rightTextStyle" />
+        </RelativeLayout>
+        <include layout="@layout/divider_middle"/>
+        <RelativeLayout
+            style="@style/itemStyle">
+            <TextView
+                android:id="@+id/tv_sign_title"
+                android:text="个性签名"
+                style="@style/itemTextStyle" />
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_toRightOf="@+id/tv_sign_title"
+                android:gravity="right"
+                android:singleLine="true"
+                android:ellipsize="end"
+                tools:text="南岸思雨"
+                style="@style/rightTextStyle" />
+        </RelativeLayout>
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+        <RelativeLayout
+            android:id="@+id/rl_ablum"
+            android:paddingLeft="@dimen/page_padding"
+            android:paddingRight="@dimen/page_padding"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="82dp">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:text="个人相册"
+                android:textColor="@color/textColor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_toLeftOf="@+id/iv_thumb_2"
+                android:id="@+id/iv_thumb_1"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_toLeftOf="@+id/iv_thumb_3"
+                android:id="@+id/iv_thumb_2"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/iv_thumb_3"
+                android:layout_alignParentRight="true"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/btn_add_to_contact_list"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="36dp"
+            android:text="添加到通讯录"
+            style="@style/btnStyle.margin" />
+    </LinearLayout>
+    </ScrollView>
+
+    </com.ixiangni.util.StateLayout>
+
+    <ImageView
+        android:id="@+id/iv_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_bar_height"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:src="@mipmap/back" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_more"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:src="@mipmap/more" />
+
+</RelativeLayout>

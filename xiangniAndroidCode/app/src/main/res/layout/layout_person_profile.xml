@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="248dp">
+
+
+    <ImageView
+        android:id="@+id/iv_person_bg"
+
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ziliaobg" />
+
+    <android.support.v7.widget.CardView
+        style="@style/personProfileStyle"
+        android:layout_below="@+id/iv_person_bg"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="@dimen/dp10">
+
+            <ImageView
+                android:id="@+id/iv_person_icon"
+                android:layout_width="@dimen/icon_size_70dp"
+                android:layout_height="@dimen/icon_size_70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="15dp"
+                tools:src="@mipmap/touxaing" />
+
+            <TextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/iv_person_icon"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/textColor2"
+                android:textSize="@dimen/text_size_16sp"
+                tools:text="南安思雨" />
+
+            <ImageView
+                android:id="@+id/iv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/tv_nick_name"
+                tools:src="@mipmap/woman" />
+
+            <TextView
+                android:id="@+id/tv_place"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_nick_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_person_icon"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="#4d4c4c"
+                android:textSize="13dp"
+                tools:text=" 总监" />
+
+            <TextView
+                android:id="@+id/tv_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_place"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/iv_person_icon"
+                android:layout_toRightOf="@+id/iv_person_icon"
+                android:paddingBottom="3dp"
+                android:paddingRight="9dp"
+                android:textColor="#4d4c4c"
+                android:textSize="13dp"
+                tools:text=" 北京运作中心" />
+
+            <TextView
+                android:id="@+id/tv_focus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_place"
+                android:layout_toRightOf="@id/iv_person_icon"
+                android:paddingBottom="3dp"
+                android:paddingLeft="9dp"
+                android:paddingRight="9dp"
+                android:paddingTop="3dp"
+                android:textColor="#212121"
+                android:visibility="gone"
+                tools:text="20人关注" />
+
+            <Button
+                android:id="@+id/btn_follow"
+                style="@style/followBtnStyle"
+                android:layout_width="65dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

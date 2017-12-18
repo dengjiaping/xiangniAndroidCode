@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="意见反馈"
+        style="@style/topBarStyle"/>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <EditText
+        android:id="@+id/edt_phone"
+        android:paddingLeft="@dimen/page_padding"
+        android:paddingRight="@dimen/page_padding"
+        android:textSize="14sp"
+        android:hint="请留下您的联系方式"
+        android:textColor="@color/textLightColor"
+        android:singleLine="true"
+        android:inputType="number"
+        android:maxLength="11"
+        style="@style/itemStyle" />
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <FrameLayout
+        android:background="@color/white"
+        android:padding="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="172dp">
+        <EditText
+            android:hint="您的留言是我们前进的动力..."
+            android:id="@+id/edt_content"
+            style="@style/editSubmitStyle" />
+
+    </FrameLayout>
+    <Button
+
+        android:id="@+id/edt_submit"
+        android:text="提交"
+        style="@style/btnStyle.margin" />
+
+
+</LinearLayout>

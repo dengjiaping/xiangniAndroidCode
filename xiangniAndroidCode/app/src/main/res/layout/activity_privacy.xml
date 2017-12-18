@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="隐私"
+        style="@style/topBarStyle"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <RelativeLayout
+        style="@style/itemStyle">
+        <TextView
+            android:text="想你圈更新提醒"
+            style="@style/itemTextStyle" />
+
+        <CheckBox
+            android:id="@+id/cb_remind_circle"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+    <include layout="@layout/divider_middle"/>
+    <RelativeLayout
+        style="@style/itemStyle">
+        <TextView
+            android:text="允许别人添加我为好友"
+            style="@style/itemTextStyle" />
+
+        <CheckBox
+            android:id="@+id/cb_apply"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+    <include layout="@layout/divider_middle"/>
+
+    <RelativeLayout
+        style="@style/itemStyle">
+        <TextView
+            android:text="加好友需要验证"
+            style="@style/itemTextStyle" />
+
+        <CheckBox
+            android:id="@+id/cb_auth"
+            style="@style/switchStyle" />
+    </RelativeLayout>
+
+</LinearLayout>

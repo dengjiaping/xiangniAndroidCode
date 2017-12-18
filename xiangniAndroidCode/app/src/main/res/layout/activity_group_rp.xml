@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        android:id="@+id/top_bar"
+        app:centerText="发红包"
+        app:rightText="支付说明"
+        style="@style/topBarStyle"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="@dimen/page_padding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/edt_total_money"
+                android:inputType="numberDecimal"
+                android:hint="总金额"
+                android:background="@drawable/rect_round_white"
+                android:textSize="14sp"
+                android:padding="@dimen/dp10"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:padding="@dimen/dp10"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="当前为拼手气红包,"
+                    android:id="@+id/tv_current_rp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="改为普通红包"
+                    android:textColor="@color/themeRed"
+                    android:id="@+id/tv_change_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <EditText
+                android:id="@+id/edt_rp_count"
+                android:inputType="number"
+                android:hint="个数"
+                android:background="@drawable/rect_round_white"
+                android:textSize="14sp"
+                android:padding="@dimen/dp10"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="@dimen/dp10"
+                android:id="@+id/tv_member_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/edt_leave_message"
+                android:hint="留言"
+                android:background="@drawable/rect_round_white"
+                android:textSize="14sp"
+                android:gravity="left"
+                android:padding="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+            <TextView
+                android:id="@+id/tv_usable_coin"
+                android:text="可用银信币"
+                android:textColor="@color/themeRed"
+                android:gravity="center"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_ok"
+                android:text="塞钱进红包"
+                style="@style/btnStyle.margin" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        style="@style/topBarStyle"
+        app:centerText="酒店详情" />
+
+    <com.ixiangni.util.StateLayout
+        android:id="@+id/state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.ixiangni.ui.PercentRelativeLayout
+                app:fixFlag="width"
+                app:widthSize="500"
+                app:heightSize="375"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.github.loopviewpager.AutoLoopViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <com.github.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/indicator"
+                    app:fillColor="#4caf65"
+                    app:strokeWidth="0dp"
+                    app:pageColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.ixiangni.ui.PercentRelativeLayout>
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:padding="@dimen/page_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_hotel_name"
+                    android:textColor="#313131"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/tv_start_level"
+                    android:text="桃源仙谷林海金阁度假村"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="3星级"
+                    android:textColor="@color/colorPrice"
+                    android:id="@+id/tv_start_level"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/colorPrice"
+                    android:layout_below="@+id/tv_hotel_name"
+                    android:id="@+id/tv_lower_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <TextView
+                android:id="@+id/tv_hotel_location"
+                android:background="@color/white"
+                android:padding="@dimen/page_padding"
+                tools:text="北京怀柔区红螺寺路5号院"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/colorHotel"
+                android:drawableLeft="@mipmap/dingwei"
+                android:drawablePadding="8dp"
+                android:ellipsize="end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <TextView
+                android:id="@+id/tv_no_room"
+                android:visibility="gone"
+                android:background="@color/white"
+                android:text="暂无房间"
+                android:gravity="center"
+                android:textColor="@color/color333"
+                android:padding="@dimen/page_padding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.handongkeji.widget.NoScrollListView
+                android:id="@+id/list_view_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <TextView
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:padding="@dimen/page_padding"
+                android:textColor="#333333"
+                android:letterSpacing="0.05"
+                android:text="酒店介绍"
+                />
+            <View
+                android:background="@color/colorddd"
+                android:layout_marginLeft="@dimen/page_padding"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <TextView
+                android:id="@+id/tv_hotel_introduce"
+                android:padding="@dimen/page_padding"
+                android:lineSpacingExtra="5dp"
+                android:background="@color/white"
+                tools:text="
+农家院距北京48.9公里，上八达岭告速路，四十分钟即到！
+在这里，您可以踏青，避暑，秋摘，赏雪！
+本着来了就是一家人的宗旨，让您寻找到回家的感觉！
+优质服务：客房床单被罩一客一换一消毒！保证干净卫生！
+"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_hotel_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    </com.ixiangni.util.StateLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rongxin.www.netsignlite.registActivity.ResultActivity">
+    <RelativeLayout
+        android:background="@color/libThemeRed"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="签约"
+            android:textColor="#fff"
+            android:textSize="22dp" />
+    </RelativeLayout>
+
+  <ImageView
+      android:scaleType="fitXY"
+      android:src="@drawable/result"
+      android:layout_width="match_parent"
+      android:layout_height="300dp" />
+    <Button
+        android:layout_marginTop="100dp"
+        android:id="@+id/btn_back_home"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:text="点击返回主页"
+        android:textColor="#fff" />
+
+
+
+</LinearLayout>

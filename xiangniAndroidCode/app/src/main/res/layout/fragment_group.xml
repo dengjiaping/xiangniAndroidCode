@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ixiangni.app.chat.GroupFragment">
+
+    <include layout="@layout/layout_nodata" />
+
+    <com.ixiangni.util.SmartPullableLayout
+        app:smart_ui_enable_pull_up="false"
+        android:id="@+id/smart_pull_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.ixiangni.util.SmartPullableLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/prgressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>

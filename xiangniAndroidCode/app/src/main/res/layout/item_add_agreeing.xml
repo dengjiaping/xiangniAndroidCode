@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:padding="@dimen/page_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginRight="12dp"
+            android:id="@+id/iv_user_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:id="@+id/tv_user_nick"
+            android:textSize="18sp"
+            android:textColor="#515151"
+            android:layout_toLeftOf="@+id/btn_agree"
+            android:paddingRight="@dimen/dp10"
+            android:layout_toRightOf="@+id/iv_user_icon"
+            android:layout_centerVertical="true"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="南安思雨"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_agree"
+            android:text="同意"
+            android:layout_width="55dp"
+            android:layout_height="28dp"
+            android:background="@drawable/rect_round_red"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+</RelativeLayout>

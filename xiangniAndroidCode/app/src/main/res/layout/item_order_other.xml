@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/page_padding"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_from_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#313131"
+        android:letterSpacing="0.05"
+        tools:text="手机充值"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_toLeftOf="@+id/tv_pay"
+            android:layout_alignParentLeft="true"
+            android:ellipsize="end"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:id="@+id/tv_plan_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#666666"
+            android:letterSpacing="0.05"
+            tools:text="2017.9.5   9：40"
+            />
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sel_pay"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="0.05"
+            tools:text="已付款"
+            />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_flight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:letterSpacing="0.05"
+        tools:text="G101"
+        />
+</LinearLayout>

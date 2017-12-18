@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ixiangni.app.LoginActivity">
+    <com.ixiangni.ui.TopBar
+        app:centerText="账号登录"
+        app:hideBack="true"
+        style="@style/topBarStyle"/>
+    <android.support.v7.widget.CardView
+        app:cardElevation="2dp"
+        android:background="@color/white"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="@dimen/page_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_tab_height">
+                <TextView
+                    android:text="身份证号"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/page_padding"
+                    android:textColor="@color/text_blue"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/divider"
+                    android:layout_width="1px"
+                    android:layout_height="14dp"/>
+
+                <EditText
+                    android:id="@+id/edt_id_card_num"
+                    android:digits="0123456789X"
+                    android:maxLength="18"
+                    android:hint="输入身份证号"
+                    android:imeOptions="actionNext"
+                    android:textSize="15sp"
+                    android:textColorHint="#c9c9c9"
+                    android:textColor="#333333"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    style="@style/editStyle"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+         <include layout="@layout/divider_match_parent"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/bottom_tab_height">
+                <TextView
+                    android:text="密码"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/page_padding"
+                    android:textColor="@color/text_blue"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+                <View
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/divider"
+                    android:layout_width="1px"
+                    android:layout_height="14dp"/>
+
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:imeOptions="actionDone"
+                    android:hint="输入密码"
+                    android:textSize="15sp"
+                    android:textColorHint="#c9c9c9"
+                    android:inputType="textPassword"
+                    android:textColor="#333333"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    style="@style/editStyle"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/tv_forget_password"
+        android:textColor="#999999"
+        android:text="忘记密码？"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/page_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_bar_height"
+        android:layout_margin="@dimen/page_padding"
+        android:background="@drawable/rect_round_red"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

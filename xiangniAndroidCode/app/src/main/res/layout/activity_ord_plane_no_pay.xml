@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ixiangni.ui.TopBar
+        app:centerText="订单详情"
+       style="@style/topBarStyle"/>
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_order_state"
+                android:padding="@dimen/page_padding"
+                android:text="订单状态:未付款"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="#313131"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+            <FrameLayout
+                android:background="@color/white"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/layout_travel_small"/>
+
+            </FrameLayout>
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <include layout="@layout/seat_layout"/>
+            <include layout="@layout/passanger_info_complete"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:background="@color/colorddd"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <include layout="@layout/pay_layout"/>
+
+</LinearLayout>

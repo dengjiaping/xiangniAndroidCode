@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/page_padding"
+    android:id="@+id/rl_edit_layout"
+    android:visibility="gone"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/itemHeightLarge">
+        <CheckBox
+            android:id="@+id/cb_select_all"
+            android:layout_centerVertical="true"
+            android:button="@drawable/sel_emotion_select"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:text="全选"
+            android:textSize="19sp"
+            android:textColor="#444444"
+            android:layout_toRightOf="@+id/cb_select_all"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/dp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_alignParentRight="true"
+            android:background="@color/themeRed"
+            android:textColor="#ffffff"
+            android:text="删除"
+            android:textSize="19sp"
+            android:gravity="center"
+            android:layout_width="80dp"
+            android:layout_height="match_parent" />
+</RelativeLayout>
